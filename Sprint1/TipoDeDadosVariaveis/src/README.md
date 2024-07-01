@@ -52,4 +52,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests c
 
 ## Sobre
 
-Este projeto é parte de um esforço contínuo para compartilhar conhecimento e facilitar o aprendizado de programação em Java. Criado por Gabriel Caio. Você pode me encontrar no LinkedIn [aqui](linkedin.com/in/gabriel-caio/).
+Este projeto é parte de um esforço contínuo para compartilhar conhecimento e facilitar o aprendizado de programação em Java. Criado por Gabriel Caio. Você pode me encontrar no LinkedIn.
