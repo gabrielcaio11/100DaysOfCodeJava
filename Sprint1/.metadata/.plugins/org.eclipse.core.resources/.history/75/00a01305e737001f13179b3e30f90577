@@ -1,0 +1,45 @@
+Exemplos de Operadores e Expressões
+
+
+Este README detalha o que você abordará sobre operadores e expressões, e inclui exemplos de código para ilustrar cada tipo de operador.
+
+## Conteúdo
+
+Este projeto abrange os seguintes tópicos:
+
+- **Operadores Aritméticos**
+  - Adição (`+`)
+  - Subtração (`-`)
+  - Multiplicação (`*`)
+  - Divisão (`/`)
+  - Módulo (`%`)
+  
+- **Operadores de Atribuição**
+  - Atribuição simples (`=`)
+  - Atribuição composta (`+=`, `-=`, `*=`, `/=`, `%=`)
+  
+- **Operadores de Comparação**
+  - Igualdade (`==`)
+  - Desigualdade (`!=`)
+  - Maior que (`>`)
+  - Menor que (`<`)
+  - Maior ou igual a (`>=`)
+  - Menor ou igual a (`<=`)
+  
+- **Operadores Lógicos**
+  - E lógico (`&&`)
+  - OU lógico (`||`)
+  - Negação lógica (`!`)
+  
+- **Operadores Bitwise**
+  - E bit a bit (`&`)
+  - OU bit a bit (`|`)
+  - OU exclusivo bit a bit (`^`)
+  - Complemento bit a bit (`~`)
+  - Deslocamento para a esquerda (`<<`)
+  - Deslocamento para a direita (`>>`)
+  - Deslocamento para a direita sem sinal (`>>>`)
+  
+- **Operador Ternário**
+  - Condicional (`? :`)
+
