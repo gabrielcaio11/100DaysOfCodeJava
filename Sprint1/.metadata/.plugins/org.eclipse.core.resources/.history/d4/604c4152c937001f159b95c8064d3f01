@@ -1,0 +1,31 @@
+package application;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Scanner scString = new Scanner(System.in);
+		System.out.println("=-".repeat(10) + "Jogo de adivinhar o maior numero para a variavel" + "-=".repeat(10));
+		
+		
+		System.out.println("\n" + " ".repeat(10) +"Digite o numero correspondente para adivinhar o valor maximo da variavel: ");
+		
+		System.out.println("[1] byte");
+		System.out.println("[2] short");
+		System.out.println("[3] int");
+		System.out.println("[4] long");
+		System.out.println("[5] float");
+		System.out.println("[6] double");
+		
+		int opcao = sc.nextInt();
+		
+		if(opcao>0 && opcao <7) {
+			
+		}else {
+			System.out.println("Opcao invalida");
+		}
+	}
+
+}

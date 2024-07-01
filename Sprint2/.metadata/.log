@@ -1,0 +1,71 @@
+!SESSION 2024-07-01 16:33:38.913 -----------------------------------------------
+eclipse.buildId=4.22.0.202403071427
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -data C:\Users\Gabriel Caio\OneDrive\Área de Trabalho\100DaysOfCodeJava\Sprint2
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-07-01 16:33:40.915
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-01 16:33:41.247
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-07-01 16:33:47.914
+!MESSAGE Logback config file: C:\Users\Gabriel Caio\OneDrive\Área de Trabalho\100DaysOfCodeJava\Sprint2\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-07-01 16:33:48.400
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-01 16:33:48.400
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-07-01 16:33:48.776
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-01 16:33:48.776
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-07-01 16:33:48.919
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-07-01 16:33:48.919
+!MESSAGE Cannot bind to an undefined command: plug-in='com.genuitec.eclipse.theming.ui', id='com.genuitec.myeclipse.help.darktheme.commandid'
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2024-07-01 16:33:49.582
+!MESSAGE A DevStyle Theme is being activated on this workspace; preparing colors and configuration
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2024-07-01 16:33:49.605
+!MESSAGE DevStyle has archived current color configurations to alternate preferences - will be restored when switching out of the DevStyle Theme
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-07-01 16:33:54.821
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Gabriel Caio'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:34:27.939
+!MESSAGE Classpath changed for project: Heranca
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:34:51.836
+!MESSAGE Classpath changed for project: Polimorfismo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:35:08.445
+!MESSAGE Classpath changed for project: ClassesAbstratas
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:35:29.491
+!MESSAGE Classpath changed for project: Interfaces
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:36:07.064
+!MESSAGE Classpath changed for project: MenbrosStaticosFinais
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:36:29.569
+!MESSAGE Classpath changed for project: TratamentoDeExceções
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:36:54.176
+!MESSAGE Classpath changed for project: ExceçõesPersonalizadas
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:37:15.047
+!MESSAGE Classpath changed for project: EstruturasDeDados
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-01 16:37:33.912
+!MESSAGE Classpath changed for project: CollectionGenerics

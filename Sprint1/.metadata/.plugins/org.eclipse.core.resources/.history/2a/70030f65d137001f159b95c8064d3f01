@@ -1,0 +1,235 @@
+package application;
+
+import java.util.Scanner;
+
+public class Main {
+	private static final byte VALOR_MAXIMO_TENTATIVAS = 5;
+	private static final byte VALOR_MAXIMO_BYTE = Byte.MAX_VALUE;
+	private static final short VALOR_MAXIMO_SHORT = Short.MAX_VALUE;
+	private static final int VALOR_MAXIMO_INT = Integer.MAX_VALUE;
+	private static final long VALOR_MAXIMO_LONG = Long.MAX_VALUE;
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		Scanner scString = new Scanner(System.in);
+		
+		System.out.println("=-".repeat(10) + "Jogo de adivinhar o maior numero para a variavel" + "-=".repeat(10));
+		int opcao;
+		do {
+			System.out.println("\n" + " ".repeat(10)
+					+ "Digite o numero correspondente para adivinhar o valor maximo da variavel: ");
+			
+			System.out.println("[0] Sair");
+			System.out.println("[1] byte");
+			System.out.println("[2] short");
+			System.out.println("[3] int");
+			System.out.println("[4] long");
+			System.out.println("[5] float");
+			System.out.println("[6] double");
+			
+
+			opcao = scn.nextInt();
+
+			if (opcao > 0 && opcao < 7) {
+				switch (opcao) {
+
+				case 1: {
+
+					Scanner sc = new Scanner(System.in);
+					int tentativas = 0;
+
+					System.out.println("Voce tera " + VALOR_MAXIMO_TENTATIVAS + " tentativas para acertar! \n");
+					do {
+						System.out.printf("%dª tentativa\n\n", tentativas + 1);
+						System.out
+								.println("Digite um valor maximo que voce acha que a variavel do tipo byte suporta: \n");
+						String num = sc.next();
+						tentativas++;
+						if (Byte.parseByte(num) == VALOR_MAXIMO_BYTE) {
+							System.out.println("Acertou!\n\n");
+							break;
+						} else {
+							if (Integer.parseInt(num) > VALOR_MAXIMO_BYTE) {
+								System.out.println("valor é maior que o maximo.\n\n");
+
+							} else {
+								System.out.println("valor é menor que o maximo.\n\n");
+							}
+						}
+
+					} while (tentativas < VALOR_MAXIMO_TENTATIVAS);
+					String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+					if (tentativas < VALOR_MAXIMO_TENTATIVAS) {
+						System.out.printf("Parabens voce acertou com %d %s.", tentativas, palavraTentativa);
+					} else {
+						System.out.printf("Voce nao conseguiu acertar!");
+					}
+					break;
+				}
+
+				case 2: {
+					Scanner sc = new Scanner(System.in);
+					int tentativas = 0;
+					System.out.println("Você terá " + VALOR_MAXIMO_TENTATIVAS + " tentativas para acertar!\n");
+					do {
+						System.out.printf("%dª tentativa\n", tentativas + 1);
+						System.out.println("Digite um valor máximo que você acha que a variável do tipo short suporta: ");
+
+						String num = sc.next();
+						tentativas++;
+						if (Short.parseShort(num) == VALOR_MAXIMO_SHORT) {
+							System.out.println("\nAcertou!\n");
+							break;
+						} else if (Short.parseShort(num) > VALOR_MAXIMO_SHORT) {
+							System.out.printf("\nO valor é maior que o maximo.\n");
+						} else {
+							System.out.printf("\nO valor é menor que o maximo.\n");
+						}
+
+					} while (tentativas < VALOR_MAXIMO_TENTATIVAS);
+
+					String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+					if (tentativas < VALOR_MAXIMO_TENTATIVAS) {
+						System.out.printf("Parabéns! Você acertou com %d %s.\n", tentativas, palavraTentativa);
+					} else {
+						System.out.println("Você não conseguiu acertar!");
+					}
+					break;
+				}
+
+				case 3: {
+					Scanner sc = new Scanner(System.in);
+					int tentativas = 0;
+					System.out.println("Você terá " + VALOR_MAXIMO_TENTATIVAS + " tentativas para acertar!\n");
+					do {
+						System.out.printf("%dª tentativa\n", tentativas + 1);
+						System.out.println("Digite um valor máximo que você acha que a variável do tipo int suporta: ");
+
+						String num = sc.next();
+						tentativas++;
+						if (Integer.parseInt(num) == VALOR_MAXIMO_SHORT) {
+							System.out.println("\nAcertou!\n");
+							break;
+						} else if (Integer.parseInt(num) > VALOR_MAXIMO_SHORT) {
+							System.out.printf("\nO valor é maior que o maximo.\n");
+						} else {
+							System.out.printf("\nO valor é menor que o maximo.\n");
+						}
+
+					} while (tentativas < VALOR_MAXIMO_TENTATIVAS);
+
+					String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+					if (tentativas < VALOR_MAXIMO_TENTATIVAS) {
+						System.out.printf("Parabéns! Você acertou com %d %s.\n", tentativas, palavraTentativa);
+					} else {
+						System.out.println("Você não conseguiu acertar!");
+					}
+					break;
+				}
+
+				case 4: {
+					Scanner sc = new Scanner(System.in);
+					int tentativas = 0;
+					System.out.println("Você terá " + VALOR_MAXIMO_TENTATIVAS + " tentativas para acertar!\n");
+					do {
+						System.out.printf("%dª tentativa\n", tentativas + 1);
+						System.out.println("Digite um valor máximo que você acha que a variável do tipo long suporta: ");
+
+						String num = sc.next();
+						tentativas++;
+						if (Long.parseLong(num) == VALOR_MAXIMO_SHORT) {
+							System.out.println("\nAcertou!\n");
+							break;
+						} else if (Long.parseLong(num) > VALOR_MAXIMO_SHORT) {
+							System.out.printf("\nO valor é maior que o maximo.\n");
+						} else {
+							System.out.printf("\nO valor é menor que o maximo.\n");
+						}
+
+					} while (tentativas < VALOR_MAXIMO_TENTATIVAS);
+
+					String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+					if (tentativas < VALOR_MAXIMO_TENTATIVAS) {
+						System.out.printf("Parabéns! Você acertou com %d %s.\n", tentativas, palavraTentativa);
+					} else {
+						System.out.println("Você não conseguiu acertar!");
+					}
+					break;
+				}
+
+				case 5: {
+					Scanner sc = new Scanner(System.in);
+					int tentativas = 0;
+					System.out.println("Você terá " + VALOR_MAXIMO_TENTATIVAS + " tentativas para acertar!\n");
+					do {
+						System.out.printf("%dª tentativa\n", tentativas + 1);
+						System.out.println("Digite um valor máximo que você acha que a variável do tipo float suporta: ");
+
+						String num = sc.next();
+						tentativas++;
+						if (Float.parseFloat(num) == VALOR_MAXIMO_SHORT) {
+							System.out.println("\nAcertou!\n");
+							break;
+						} else if (Float.parseFloat(num) > VALOR_MAXIMO_SHORT) {
+							System.out.printf("\nO valor é maior que o maximo.\n");
+						} else {
+							System.out.printf("\nO valor é menor que o maximo.\n");
+						}
+
+					} while (tentativas < VALOR_MAXIMO_TENTATIVAS);
+
+					String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+					if (tentativas < VALOR_MAXIMO_TENTATIVAS) {
+						System.out.printf("Parabéns! Você acertou com %d %s.\n", tentativas, palavraTentativa);
+					} else {
+						System.out.println("Você não conseguiu acertar!");
+					}
+					break;
+				}
+
+				case 6: {
+					Scanner sc = new Scanner(System.in);
+					int tentativas = 0;
+					System.out.println("Você terá " + VALOR_MAXIMO_TENTATIVAS + " tentativas para acertar!\n");
+					do {
+						System.out.printf("%dª tentativa\n", tentativas + 1);
+						System.out.println("Digite um valor máximo que você acha que a variável do tipo double suporta: ");
+
+						String num = sc.next();
+						tentativas++;
+						if (Double.parseDouble(num) == VALOR_MAXIMO_SHORT) {
+							System.out.println("\nAcertou!\n");
+							break;
+						} else if (Double.parseDouble(num) > VALOR_MAXIMO_SHORT) {
+							System.out.printf("\nO valor é maior que o maximo.\n");
+						} else {
+							System.out.printf("\nO valor é menor que o maximo.\n");
+						}
+
+					} while (tentativas < VALOR_MAXIMO_TENTATIVAS);
+
+					String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+					if (tentativas < VALOR_MAXIMO_TENTATIVAS) {
+						System.out.printf("Parabéns! Você acertou com %d %s.\n", tentativas, palavraTentativa);
+					} else {
+						System.out.println("Você não conseguiu acertar!");
+					}
+					break;
+				}
+
+				}
+
+			} else {
+				System.out.println("Opcao invalida");
+			}
+
+		} while (opcao == 7);
+	}
+
+}

@@ -1,0 +1,17 @@
+package application;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// short int long float double boolean char String 
+		short varShort = 100;
+		System.out.println(varShort);
+		varShort = sc.nextShort();
+		System.out.println(varShort);
+
+	}
+
+}

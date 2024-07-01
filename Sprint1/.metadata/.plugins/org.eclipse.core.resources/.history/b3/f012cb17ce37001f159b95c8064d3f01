@@ -1,0 +1,41 @@
+package application;
+
+import java.util.Scanner;
+
+public class Teste {
+
+	
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tentativas = 0;
+		System.out.println("Você terá 3 tentativas para acertar!\n");
+		do {
+			System.out.printf("%dª tentativa\n", tentativas + 1);
+			System.out.println("Digite um valor máximo que você acha que a variável do tipo short suporta: ");
+
+			String num = sc.next();
+			tentativas++;
+			if (Short.parseShort(num) == VALOR_MAXIMO_SHORT) {
+				System.out.println("Acertou!\n");
+				break;
+			} else if (Short.parseShort(num) > VALOR_MAXIMO_SHORT) {
+				System.out.printf("O valor é maior que o maximo.\n");
+			} else {
+				System.out.printf("O valor é menor que o maximo.\n");
+			}
+
+		} while (tentativas < 5);
+
+		String palavraTentativa = tentativas > 0 ? "tentativas" : "tentativa";
+
+		if (tentativas < 5) {
+			System.out.printf("Parabéns! Você acertou com %d %s.\n", tentativas, palavraTentativa);
+		} else {
+			System.out.println("Você não conseguiu acertar!");
+		}
+
+		sc.close();
+	}
+
+}
