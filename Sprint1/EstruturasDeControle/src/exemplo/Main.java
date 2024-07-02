@@ -41,7 +41,6 @@ public class Main {
 			estacao = "Mês inválido";
 		}
 
-		
 		System.out.printf("A data %d/%d/%d corresponde à estação: %s.%n", dia, mes, ano, estacao);
 
 		sc.close();

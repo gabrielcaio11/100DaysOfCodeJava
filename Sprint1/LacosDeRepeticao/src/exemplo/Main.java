@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Usando laço for:\n\n");
+		System.out.println("Usando laço for:\n");
         // Solicita a quantidade de alunos
         System.out.println("Digite a quantidade de alunos:");
         int quantidadeAlunos = sc.nextInt();
@@ -29,7 +29,7 @@ public class Main {
 
         // Exibe a média da turma
         System.out.printf("A média da turma é: %.2f%n", media);
-        System.out.println("\n\nFim do laço for\n\n");
+        System.out.println("\nFim do laço for\n\n");
         sc.close();
 
 	}
