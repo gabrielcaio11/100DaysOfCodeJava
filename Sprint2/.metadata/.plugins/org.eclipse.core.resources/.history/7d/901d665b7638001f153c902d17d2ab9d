@@ -1,0 +1,129 @@
+Para incorporar o conceito de herança no projeto, podemos criar uma classe base chamada `Pessoa`, que será estendida pela classe `Cliente`. A classe `Pessoa` conterá atributos comuns, como `nome`, `cpf` e `cep`, enquanto a classe `Cliente` poderá adicionar atributos ou métodos específicos de clientes.
+
+
+
+### O que foi modificado:
+
+1. **Classe `Pessoa`**:
+   - Contém atributos comuns (`nome`, `cpf`, `cep`) e métodos getter e setter.
+   - Inclui um método `exibirInformacoes` para exibir os detalhes da pessoa.
+
+2. **Classe `Cliente`**:
+   - Estende a classe `Pessoa` utilizando a herança.
+   - Usa o construtor da classe base `Pessoa` para inicializar os atributos comuns.
+
+3. **Classe `Fila` e `main`**:
+   - Continua igual, mas agora trabalha com objetos da classe `Cliente`, que herdam de `Pessoa`.
+
+## Funcionalidades
+
+- Adicionar um cliente à fila
+- Remover um cliente da fila
+- Exibir todos os clientes na fila
+
+## Estrutura do Projeto
+
+- `Pessoa`: Classe base que representa uma pessoa com nome, CPF e CEP.
+- `Cliente`: Classe derivada de `Pessoa` que representa um cliente.
+- `Fila`: Classe que gerencia a fila de clientes, com métodos para adicionar, remover e exibir clientes.
+- `Main`: Método principal que oferece um menu interativo para o usuário.
+
+## Pré-requisitos
+
+- Java JDK 8 ou superior
+- Um ambiente de desenvolvimento Java (Eclipse, IntelliJ IDEA, VS Code com extensão Java, etc.)
+
+## Como Executar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. Compile o projeto:
+   ```bash
+   javac Main.java
+   ```
+4. Execute o projeto:
+   ```bash
+   java Main
+   ```
+
+## Uso
+
+Após executar o projeto, você verá um menu interativo no terminal:
+
+```
+Menu:
+1. Adicionar Cliente
+2. Remover Cliente
+3. Exibir Todos os Clientes
+4. Sair
+Escolha uma opção:
+```
+
+### Adicionar Cliente
+
+Selecione a opção `1` e insira os detalhes do cliente (nome, CPF e CEP) conforme solicitado.
+
+### Remover Cliente
+
+Selecione a opção `2` para remover o cliente no início da fila.
+
+### Exibir Todos os Clientes
+
+Selecione a opção `3` para exibir todos os clientes atualmente na fila.
+
+### Sair
+
+Selecione a opção `4` para sair do programa.
+
+## Exemplo de Uso
+
+1. Adicione um cliente:
+
+```
+Digite o nome do cliente: João Silva
+Digite o CPF do cliente: 123.456.789-00
+Digite o CEP do cliente: 12345-678
+Cliente adicionado à fila.
+```
+
+2. Exiba todos os clientes:
+
+```
+Clientes na fila:
+1. João Silva - CPF: 123.456.789-00 - CEP: 12345-678
+```
+
+3. Remova um cliente:
+
+```
+Cliente removido da fila: João Silva
+```
+
+4. Saia do programa:
+
+```
+Saindo...
+```
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias para este projeto. Para isso:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature ou correção (`git checkout -b feature/nova-feature`).
+3. Faça commit das suas alterações (`git commit -am 'Adiciona nova feature'`).
+4. Faça push para a branch (`git push origin feature/nova-feature`).
+5. Crie um novo Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+```
+
+Este README inclui todas as informações necessárias, destacando a implementação de herança como parte do desafio de 100 dias de codificação em Java.

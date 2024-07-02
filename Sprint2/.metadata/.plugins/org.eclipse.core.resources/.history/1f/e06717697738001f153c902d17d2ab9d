@@ -1,0 +1,422 @@
+Para incorporar o conceito de herança no projeto, podemos criar uma classe base chamada `Pessoa`, que será estendida pela classe `Cliente`. A classe `Pessoa` conterá atributos comuns, como `nome`, `cpf` e `cep`, enquanto a classe `Cliente` poderá adicionar atributos ou métodos específicos de clientes.
+
+
+
+### O que foi modificado:
+
+1. **Classe `Pessoa`**:
+   - Contém atributos comuns (`nome`, `cpf`, `cep`) e métodos getter e setter.
+   - Inclui um método `exibirInformacoes` para exibir os detalhes da pessoa.
+
+2. **Classe `Cliente`**:
+   - Estende a classe `Pessoa` utilizando a herança.
+   - Usa o construtor da classe base `Pessoa` para inicializar os atributos comuns.
+
+3. **Classe `Fila` e `main`**:
+   - Continua igual, mas agora trabalha com objetos da classe `Cliente`, que herdam de `Pessoa`.
+
+## Funcionalidades
+
+- Adicionar um cliente à fila
+- Remover um cliente da fila
+- Exibir todos os clientes na fila
+
+## Estrutura do Projeto
+
+- `Pessoa`: Classe base que representa uma pessoa com nome, CPF e CEP.
+- `Cliente`: Classe derivada de `Pessoa` que representa um cliente.
+- `Fila`: Classe que gerencia a fila de clientes, com métodos para adicionar, remover e exibir clientes.
+- `Main`: Método principal que oferece um menu interativo para o usuário.
+
+## Pré-requisitos
+
+- Java JDK 8 ou superior
+- Um ambiente de desenvolvimento Java (Eclipse, IntelliJ IDEA, VS Code com extensão Java, etc.)
+
+## Como Executar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. Compile o projeto:
+   ```bash
+   javac Main.java
+   ```
+4. Execute o projeto:
+   ```bash
+   java Main
+   ```
+
+## Uso
+
+Após executar o projeto, você verá um menu interativo no terminal:
+
+```
+Menu:
+1. Adicionar Cliente
+2. Remover Cliente
+3. Exibir Todos os Clientes
+4. Sair
+Escolha uma opção:
+```
+
+### Adicionar Cliente
+
+Selecione a opção `1` e insira os detalhes do cliente (nome, CPF e CEP) conforme solicitado.
+
+### Remover Cliente
+
+Selecione a opção `2` para remover o cliente no início da fila.
+
+### Exibir Todos os Clientes
+
+Selecione a opção `3` para exibir todos os clientes atualmente na fila.
+
+### Sair
+
+Selecione a opção `4` para sair do programa.
+
+## Exemplo de Uso
+
+1. Adicione um cliente:
+
+```
+Digite o nome do cliente: João Silva
+Digite o CPF do cliente: 123.456.789-00
+Digite o CEP do cliente: 12345-678
+Cliente adicionado à fila.
+```
+
+2. Exiba todos os clientes:
+
+```
+Clientes na fila:
+1. João Silva - CPF: 123.456.789-00 - CEP: 12345-678
+```
+
+3. Remova um cliente:
+
+```
+Cliente removido da fila: João Silva
+```
+
+4. Saia do programa:
+
+```
+Saindo...
+```
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias para este projeto. Para isso:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature ou correção (`git checkout -b feature/nova-feature`).
+3. Faça commit das suas alterações (`git commit -am 'Adiciona nova feature'`).
+4. Faça push para a branch (`git push origin feature/nova-feature`).
+5. Crie um novo Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+```
+
+Para incorporar o conceito de herança no projeto, podemos criar uma classe base chamada `Pessoa`, que será estendida pela classe `Cliente`. A classe `Pessoa` conterá atributos comuns, como `nome`, `cpf` e `cep`, enquanto a classe `Cliente` poderá adicionar atributos ou métodos específicos de clientes.
+
+Aqui está a implementação das classes `Pessoa` e `Cliente` com herança:
+
+```java
+class Pessoa {
+    protected String nome;
+    protected String cpf;
+    protected String cep;
+
+    public Pessoa(String nome, String cpf, String cep) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.cep = cep;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("CPF: " + cpf);
+        System.out.println("CEP: " + cep);
+    }
+}
+
+class Cliente extends Pessoa {
+    public Cliente(String nome, String cpf, String cep) {
+        super(nome, cpf, cep);
+    }
+}
+
+public class Fila {
+    private Cliente[] clientes;
+    private int tamanho;
+
+    public Fila(int capacidade) {
+        clientes = new Cliente[capacidade];
+        tamanho = 0;
+    }
+
+    public void adicionarCliente(Cliente cliente) {
+        if (tamanho < clientes.length) {
+            clientes[tamanho] = cliente;
+            tamanho++;
+            System.out.println("Cliente adicionado à fila.");
+        } else {
+            System.out.println("A fila está cheia!");
+        }
+    }
+
+    public Cliente removerCliente() {
+        if (tamanho == 0) {
+            System.out.println("A fila está vazia!");
+            return null;
+        } else {
+            Cliente clienteRemovido = clientes[0];
+            for (int i = 1; i < tamanho; i++) {
+                clientes[i - 1] = clientes[i];
+            }
+            clientes[tamanho - 1] = null;
+            tamanho--;
+            System.out.println("Cliente removido da fila: " + clienteRemovido.getNome());
+            return clienteRemovido;
+        }
+    }
+
+    public void exibirTodosClientes() {
+        if (tamanho == 0) {
+            System.out.println("A fila está vazia!");
+        } else {
+            System.out.println("Clientes na fila:");
+            for (int i = 0; i < tamanho; i++) {
+                System.out.println((i + 1) + ". " + clientes[i].getNome() + " - CPF: " + clientes[i].getCpf() + " - CEP: " + clientes[i].getCep());
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a capacidade da fila: ");
+        int capacidade = scanner.nextInt();
+        scanner.nextLine();  // Consome a nova linha
+
+        Fila fila = new Fila(capacidade);
+
+        while (true) {
+            System.out.println("\nMenu:");
+            System.out.println("1. Adicionar Cliente");
+            System.out.println("2. Remover Cliente");
+            System.out.println("3. Exibir Todos os Clientes");
+            System.out.println("4. Sair");
+            System.out.print("Escolha uma opção: ");
+
+            int opcao = scanner.nextInt();
+            scanner.nextLine();  // Consome a nova linha
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite o nome do cliente: ");
+                    String nome = scanner.nextLine();
+                    System.out.print("Digite o CPF do cliente: ");
+                    String cpf = scanner.nextLine();
+                    System.out.print("Digite o CEP do cliente: ");
+                    String cep = scanner.nextLine();
+                    Cliente cliente = new Cliente(nome, cpf, cep);
+                    fila.adicionarCliente(cliente);
+                    break;
+                case 2:
+                    fila.removerCliente();
+                    break;
+                case 3:
+                    fila.exibirTodosClientes();
+                    break;
+                case 4:
+                    System.out.println("Saindo...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+            }
+        }
+    }
+}
+```
+
+### O que foi modificado:
+
+1. **Classe `Pessoa`**:
+   - Contém atributos comuns (`nome`, `cpf`, `cep`) e métodos getter e setter.
+   - Inclui um método `exibirInformacoes` para exibir os detalhes da pessoa.
+
+2. **Classe `Cliente`**:
+   - Estende a classe `Pessoa` utilizando a herança.
+   - Usa o construtor da classe base `Pessoa` para inicializar os atributos comuns.
+
+3. **Classe `Fila` e `main`**:
+   - Continua igual, mas agora trabalha com objetos da classe `Cliente`, que herdam de `Pessoa`.
+
+### README atualizado
+
+```markdown
+# Projeto Fila de Clientes em Java
+
+Este projeto faz parte de um desafio de 100 dias codando em Java. O objetivo é aplicar e consolidar os conhecimentos adquiridos durante o desafio, utilizando os seguintes tópicos:
+- Introdução ao Java e configuração do ambiente
+- Estrutura de um programa Java
+- Tipos de dados e variáveis
+- Operadores e expressões
+- Estruturas de controle (if, switch)
+- Laços de repetição (for, while, do-while)
+- Arrays e manipulação de arrays
+- Métodos e sobrecarga de métodos
+- Classes e objetos
+- Encapsulamento e modificadores de acesso
+- **Herança**: Implementação de herança entre classes
+
+## Funcionalidades
+
+- Adicionar um cliente à fila
+- Remover um cliente da fila
+- Exibir todos os clientes na fila
+
+## Estrutura do Projeto
+
+- `Pessoa`: Classe base que representa uma pessoa com nome, CPF e CEP.
+- `Cliente`: Classe derivada de `Pessoa` que representa um cliente.
+- `Fila`: Classe que gerencia a fila de clientes, com métodos para adicionar, remover e exibir clientes.
+- `Main`: Método principal que oferece um menu interativo para o usuário.
+
+## Pré-requisitos
+
+- Java JDK 8 ou superior
+- Um ambiente de desenvolvimento Java (Eclipse, IntelliJ IDEA, VS Code com extensão Java, etc.)
+
+## Como Executar
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. Compile o projeto:
+   ```bash
+   javac Main.java
+   ```
+4. Execute o projeto:
+   ```bash
+   java Main
+   ```
+
+## Uso
+
+Após executar o projeto, você verá um menu interativo no terminal:
+
+```
+Menu:
+1. Adicionar Cliente
+2. Remover Cliente
+3. Exibir Todos os Clientes
+4. Sair
+Escolha uma opção:
+```
+
+### Adicionar Cliente
+
+Selecione a opção `1` e insira os detalhes do cliente (nome, CPF e CEP) conforme solicitado.
+
+### Remover Cliente
+
+Selecione a opção `2` para remover o cliente no início da fila.
+
+### Exibir Todos os Clientes
+
+Selecione a opção `3` para exibir todos os clientes atualmente na fila.
+
+### Sair
+
+Selecione a opção `4` para sair do programa.
+
+## Exemplo de Uso
+
+1. Adicione um cliente:
+
+```
+Digite o nome do cliente: João Silva
+Digite o CPF do cliente: 123.456.789-00
+Digite o CEP do cliente: 12345-678
+Cliente adicionado à fila.
+```
+
+2. Exiba todos os clientes:
+
+```
+Clientes na fila:
+1. João Silva - CPF: 123.456.789-00 - CEP: 12345-678
+```
+
+3. Remova um cliente:
+
+```
+Cliente removido da fila: João Silva
+```
+
+4. Saia do programa:
+
+```
+Saindo...
+```
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias para este projeto. Para isso:
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature ou correção (`git checkout -b feature/nova-feature`).
+3. Faça commit das suas alterações (`git commit -am 'Adiciona nova feature'`).
+4. Faça push para a branch (`git push origin feature/nova-feature`).
+5. Crie um novo Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+## Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests com melhorias nos exemplos existentes ou novos exemplos que ajudem a expandir o conhecimento sobre tipos de dados em Java.
+
+## Sobre
+Este projeto é parte de um esforço contínuo para compartilhar conhecimento e facilitar o aprendizado de programação em Java. Criado por Gabriel Caio. Você pode me encontrar no LinkedIn.
