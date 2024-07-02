@@ -1,0 +1,16 @@
+package application;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numeros = {10, 20, 30, 40, 50};
+        System.out.println("utilizando for com indice");
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.println("Número no índice " + i + ": " + numeros[i]);
+        }
+        System.out.println("utilizando forEach");
+        for (int numero : numeros) {
+            System.out.println("Número: " + numero);
+        }
+    }
+}
+
