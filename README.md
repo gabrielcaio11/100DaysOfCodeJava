@@ -138,7 +138,7 @@ A cada dia, vou atualizar este repositório com os códigos, anotações e exemp
 
 ## Sobre
 
-Este projeto é parte de um esforço contínuo para compartilhar conhecimento e facilitar o aprendizado de programação em Java. Criado por Gabriel Caio. Você pode me encontrar no LinkedIn [aqui](linkedin.com/in/gabriel-caio/).
+Este projeto é parte de um esforço contínuo para compartilhar conhecimento e facilitar o aprendizado de programação em Java. Criado por Gabriel Caio. Você pode me encontrar no LinkedIn [aqui](linkedin.com/in/gabriel-caio).
 Este projeto é parte de um esforço contínuo para aprimorar minhas habilidades em Java e compartilhar conhecimento com a comunidade. Sinta-se à vontade para enviar pull requests ou abrir issues com sugestões e melhorias.
 
 ---
