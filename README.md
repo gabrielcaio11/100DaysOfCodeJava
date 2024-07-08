@@ -22,8 +22,6 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Herança
 - Polimorfismo
 - Classes abstratas e interfaces
-- Classes aninhadas e internas
-- Pacotes e importação
 - Membros estáticos e finais
 - Tratamento de exceções
 - Exceções personalizadas
