@@ -4,7 +4,7 @@ package entities;
 public class Cliente extends Pessoa{
 
 	private String tipoCliente;
-	public Cliente(String nome, String cpf, String cep, String tipoCliente ) {
+	public Cliente(String nome, String cpf, String cep, String tipoCliente) {
 		super(nome, cpf, cep);
 		this.tipoCliente = tipoCliente;
 		
