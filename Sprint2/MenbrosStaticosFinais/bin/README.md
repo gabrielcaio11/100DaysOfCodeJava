@@ -18,9 +18,6 @@ Este projeto implementa uma aplicação simples para gerenciar uma sala de aula,
 - **`SalaDeAula.java`**: Classe que representa a sala de aula e gerencia os alunos.
 - **`Estudante.java`**: Classe que representa os estudantes com atributos básicos como nome, idade e matrícula.
 
-Para incluir uma seção sobre o uso do projeto no README, você pode descrever brevemente como os usuários podem interagir com a aplicação e quais funcionalidades estão disponíveis. Aqui está um exemplo de como você pode estruturar essa seção:
-
-
 ### Funcionalidades Disponíveis
 
 Este projeto permite gerenciar uma sala de aula virtualmente, onde você pode realizar as seguintes operações:
