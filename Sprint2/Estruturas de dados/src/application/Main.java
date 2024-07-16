@@ -16,7 +16,7 @@ import entities.Produto;
 public class Main {
 	private static ArrayList<Cliente> clientes = new ArrayList<>();
 	private static ArrayList<Produto> produtosNoEstoque = new ArrayList<>();
-	private static HashMap<Cliente,List<Pedido>> pedidoMap = new HashMap<>();
+	private static HashMap<Cliente,ArrayList<Pedido>> pedidoMap = new HashMap<>();
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
