@@ -1,6 +1,6 @@
 # Sistema de Gerenciamento de Pedidos
 
-Este projeto é um sistema básico para gerenciamento de pedidos, desenvolvido em Java. Permite a criação de clientes, login, adição de produtos ao carrinho e visualização dos pedidos realizados.
+Este projeto é um sistema básico para gerenciamento de pedidos, desenvolvido como parte do meu desafio de codar por 100 dias consecutivos. Ele permite a criação de clientes, login, adição de produtos ao carrinho e visualização dos pedidos realizados, com foco central no uso de estruturas de dados como ArrayList e HashMap.
 
 ## Funcionalidades:
 
@@ -20,11 +20,6 @@ O projeto é composto pelas seguintes classes:
 - `Pedido`: Representa um pedido contendo produtos e suas quantidades.
 - `Produto`: Representa um produto disponível no estoque.
 
-## Executando o Projeto
-
-1. Clone este repositório.
-2. Compile todas as classes Java.
-3. Execute a classe `Main`.
 
 ## Uso
 
