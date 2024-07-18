@@ -2,11 +2,8 @@ package application;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 
 import entities.Cliente;
 import entities.Endereco;
@@ -20,6 +17,7 @@ public class Main {
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+			
 		
 		
 		// inicia a aplicacao com usuarios e produtos
@@ -96,14 +94,19 @@ public class Main {
 	}
 
 	private static Cliente cadastrarCliente() {
+		
 		System.out.print("Nome: ");
 		String nome = scanner.nextLine();
+		
 		System.out.print("CPF: ");
 		String cpf = scanner.nextLine();
+		
 		System.out.print("Rua: ");
 		String rua = scanner.nextLine();
+		
 		System.out.print("Número: ");
 		int numero = scanner.nextInt();
+		
 		scanner.nextLine(); // Consumir a nova linha
 		System.out.print("Ponto de Referência: ");
 		String pontoDeReferencia = scanner.nextLine();
@@ -127,7 +130,7 @@ public class Main {
 		Cliente tempCliente = new Cliente("", cpf, null);
 		if (clientes.contains(tempCliente)) {
 			System.out.println("Login bem-sucedido!");
-			return tempCliente;
+			return clientes.get(clientes.indexOf(tempCliente));
 		}
 		System.out.println("Cliente não encontrado. Tente novamente.");
 		return null;
