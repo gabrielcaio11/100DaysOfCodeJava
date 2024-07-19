@@ -3674,3 +3674,9 @@ java.lang.IllegalStateException: Conflicting handlers: {[ActionHandler(org.eclip
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-19 15:14:21.352
+!MESSAGE Classpath changed for project: Collections
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-07-19 15:14:50.514
+!MESSAGE Classpath changed for project: Generics
