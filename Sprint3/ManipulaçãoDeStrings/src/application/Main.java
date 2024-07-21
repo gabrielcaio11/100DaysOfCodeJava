@@ -10,13 +10,14 @@ public class Main {
 		String texto = sc.nextLine();
 		
 		System.out.println("\n\nTexto criptografado: \n");
-		System.out.println(criptografarTexto(texto));
+		System.out.println(criptografarTexto(texto).toUpperCase());
+		System.out.println();
 
 		System.out.println("Digite seu texto para descriptografar: ");
 	    texto = sc.nextLine();
 		
 		System.out.println("\n\nTexto descriptografado: \n");
-		System.out.println(descriptografarTexto(texto));
+		System.out.println(descriptografarTexto(texto.toLowerCase()));
 	}
 	
 	private static String criptografarTexto(String texto) {
