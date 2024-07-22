@@ -22,5 +22,11 @@ public class Estudante {
     public String getMatricula() {
         return matricula;
     }
+
+	@Override
+	public String toString() {
+		return "Estudante Nome: " + nome + " CPF: " + cpf + " Matricula: " + matricula;
+	}
+    
 }
 

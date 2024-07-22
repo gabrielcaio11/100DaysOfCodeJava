@@ -8,6 +8,9 @@ public class Main {
         // Append
         sb.append(" codando");
         System.out.println(sb.toString());  // Output: Desafio de 100 dias codando
+        
+        // Append
+        sb.append(" Sobre StringBuilder");
 
         // Insert
         sb.insert(0, "Meu ");
@@ -20,7 +23,7 @@ public class Main {
 
         // Reverse
         sb.reverse();
-        System.out.println(sb.toString());  // Output: odnadoC said 001 ed oifaseD ueM
+        System.out.println("Frase reversa: "+sb.toString());  // Output: odnadoC said 001 ed oifaseD ueM
 	}
 
 }
