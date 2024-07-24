@@ -34,10 +34,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - StringBuilder e StringBuffer
 - Leitura e escrita em arquivos
 - Serialização de objetos
-- Entrada e saída com Scanner
-- Formatação de dados
 - Java NIO (New I/O)
-- Trabalhando com arquivos e diretórios
 - Leitura e escrita de arquivos CSV
 - Leitura e escrita de arquivos JSON e XML
 

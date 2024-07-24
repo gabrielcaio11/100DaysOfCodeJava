@@ -32,16 +32,12 @@ public class Main {
 			Produto produtoDesserializado = (Produto) inputStream.readObject();
 			System.out.println(produtoDesserializado);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}	
 		
 	}
 	
