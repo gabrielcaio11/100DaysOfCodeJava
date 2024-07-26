@@ -8,6 +8,8 @@ public class OperacoesbasicasFiles {
 
 	public static void main(String[] args) {
 		Path arquivo = Path.of("C:\\temp\\docs","teste1");
+		
+		// criando multiplos diretorios de uma vez
 		Path arquivo2 = Path.of("C:\\temp\\docs\\teste1\\textos\\texto1");
 		try {
 			Files.createDirectory(arquivo);
