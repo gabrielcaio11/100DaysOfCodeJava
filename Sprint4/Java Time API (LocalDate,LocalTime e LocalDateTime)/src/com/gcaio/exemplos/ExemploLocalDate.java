@@ -1,4 +1,4 @@
-package com.gcaio.application;
+package com.gcaio.exemplos;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
