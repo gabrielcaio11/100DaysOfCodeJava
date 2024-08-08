@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Java Time API (Date, Time, LocalDate)</name>
+	<name>Java Time API (LocalDate,LocalTime e LocalDateTime)</name>
 	<comment></comment>
 	<projects>
 	</projects>
