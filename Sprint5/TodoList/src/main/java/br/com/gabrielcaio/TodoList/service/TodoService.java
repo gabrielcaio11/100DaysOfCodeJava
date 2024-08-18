@@ -1,36 +1,57 @@
 package br.com.gabrielcaio.TodoList.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import br.com.gabrielcaio.TodoList.entities.Todo;
 import br.com.gabrielcaio.TodoList.repository.TodoRepository;
+import br.com.gabrielcaio.TodoList.service.exceptions.TodoAlreadyExistsException;
+import br.com.gabrielcaio.TodoList.service.exceptions.TodoNotExistsException;
+import br.com.gabrielcaio.TodoList.service.exceptions.TodoNotFoundException;
 
 @Service
 public class TodoService {
 
 	private TodoRepository todoRepository;
-	
+
 	public TodoService(TodoRepository todoRepository) {
 		this.todoRepository = todoRepository;
 	}
-	
-	public Optional<Todo> findById(Long id){
-		return todoRepository.findById(id);
+
+	public Todo findById(Long id) {
+		return todoRepository.findById(id).orElseThrow(() -> new TodoNotFoundException("Id not found"));
 	}
-	public List<Todo> findAll(){
+
+	public List<Todo> findAll() {
 		return todoRepository.findAll();
 	}
-	
+
 	public Todo create(Todo todo) {
+		if (isTodoExists(todo)) {
+			throw new TodoAlreadyExistsException("Todo Already Exists");
+		}
 		return todoRepository.save(todo);
 	}
+
+	private boolean isTodoExists(Todo todo) {
+		if (todoRepository.existsById(todo.getId())) {
+			return true;
+		}
+		return false;
+	}
+
 	public Todo update(Todo todo) {
+		if (!isTodoExists(todo)) {
+			throw new TodoNotExistsException("Todo Not Exists");
+		}
 		return todoRepository.save(todo);
 	}
+
 	public void deleteById(Long id) {
+		if (!todoRepository.existsById(id)) {
+			throw new TodoNotExistsException("Todo Not Exists");
+		}
 		todoRepository.deleteById(id);
 	}
 }

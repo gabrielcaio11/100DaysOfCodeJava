@@ -35,16 +35,19 @@ public class TodoControlle {
 			@ApiResponse(responseCode = "200", description = "retorna o todo"),
 			@ApiResponse(responseCode = "400", description = "Não existe um todo com id informado") })
 	@GetMapping("{id}")
-	public ResponseEntity<Optional<Todo>> findById(@PathVariable Long id) {
-		// body,status
+	public ResponseEntity<Todo> findById(@PathVariable Long id) {
 		return new ResponseEntity<>(todoService.findById(id), HttpStatus.OK);
 
 	}
 
 	@Operation(description = "Retorna todos os todo")
-	@ApiResponses(value = { 
+
+	@ApiResponses(value = {
+
 			@ApiResponse(responseCode = "200", description = "retorna todo os todo"),
+
 			@ApiResponse(responseCode = "400", description = "Não existe todo cadastrados") })
+
 	@GetMapping
 	public ResponseEntity<List<Todo>> findAll() {
 		return new ResponseEntity<List<Todo>>(todoService.findAll(), HttpStatus.OK);
@@ -52,26 +55,38 @@ public class TodoControlle {
 	}
 
 	@Operation(description = "adiciona um todo")
-	@ApiResponses(value = { 
-			@ApiResponse(responseCode = "201", description = "retorna  o todo adicionado") })
+
+	@ApiResponses(value = {
+
+			@ApiResponse(responseCode = "201", description = "retorna  o todo adicionado"),
+			@ApiResponse(responseCode = "209", description = "conflito - todo ja existe") })
+
 	@PostMapping
 	public ResponseEntity<Todo> create(@RequestBody Todo todo) {
 		return new ResponseEntity<>(todoService.create(todo), HttpStatus.CREATED);
 	}
 
 	@Operation(description = "atualiza um todo")
-	@ApiResponses(value = { 
+
+	@ApiResponses(value = {
+
 			@ApiResponse(responseCode = "201", description = "retorna  o todo atualizado"),
+
 			@ApiResponse(responseCode = "400", description = "Não existe esse todo informado") })
+
 	@PutMapping
 	public ResponseEntity<Todo> update(@RequestBody Todo todo) {
 		return new ResponseEntity<>(todoService.update(todo), HttpStatus.CREATED);
 	}
 
 	@Operation(description = "deleta um todo pelo id")
-	@ApiResponses(value = { 
+
+	@ApiResponses(value = {
+
 			@ApiResponse(responseCode = "204", description = "todo deletado com sucesso"),
+
 			@ApiResponse(responseCode = "400", description = "Não existe esse todo informado") })
+
 	@DeleteMapping("{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id) {
 		todoService.deleteById(id);
