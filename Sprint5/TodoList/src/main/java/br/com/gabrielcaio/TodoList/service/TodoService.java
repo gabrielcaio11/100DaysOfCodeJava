@@ -1,7 +1,7 @@
 package br.com.gabrielcaio.TodoList.service;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import br.com.gabrielcaio.TodoList.entities.Todo;
@@ -22,9 +22,8 @@ public class TodoService {
 	public Todo findById(Long id) {
 		return todoRepository.findById(id).orElseThrow(() -> new TodoNotFoundException("Id not found"));
 	}
-
-	public List<Todo> findAll() {
-		return todoRepository.findAll();
+	public Page<Todo> findAll(Pageable pageable) {
+		return todoRepository.findAll(pageable);
 	}
 
 	public Todo create(Todo todo) {

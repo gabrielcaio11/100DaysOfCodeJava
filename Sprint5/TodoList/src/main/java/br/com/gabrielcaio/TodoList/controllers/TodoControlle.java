@@ -1,8 +1,7 @@
 package br.com.gabrielcaio.TodoList.controllers;
 
-import java.util.List;
-import java.util.Optional;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.gabrielcaio.TodoList.entities.Todo;
@@ -39,7 +39,6 @@ public class TodoControlle {
 		return new ResponseEntity<>(todoService.findById(id), HttpStatus.OK);
 
 	}
-
 	@Operation(description = "Retorna todos os todo")
 
 	@ApiResponses(value = {
@@ -49,8 +48,12 @@ public class TodoControlle {
 			@ApiResponse(responseCode = "400", description = "Não existe todo cadastrados") })
 
 	@GetMapping
-	public ResponseEntity<List<Todo>> findAll() {
-		return new ResponseEntity<List<Todo>>(todoService.findAll(), HttpStatus.OK);
+	public ResponseEntity<Page<Todo>> findAll(
+			@RequestParam(defaultValue = "0") int page, 
+			@RequestParam(defaultValue = "10") int size) {
+		//Pageable pageable = PageRequest.of(page, size);
+		return new ResponseEntity<Page<Todo>>(todoService.findAll(PageRequest.of(page, size)), HttpStatus.OK);
+
 
 	}
 
