@@ -2,6 +2,7 @@ package br.com.gabrielcaio.TodoList.controllers;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,7 +33,7 @@ public class TodoControlle {
 
 	@Operation(description = "Busca o todo pelo id")
 	@ApiResponses(value = { 
-			@ApiResponse(responseCode = "200", description = "retorna o todo"),
+			@ApiResponse(responseCode = "200", description = "retorna o TODO"),
 			@ApiResponse(responseCode = "400", description = "Não existe um todo com id informado") })
 	@GetMapping("{id}")
 	public ResponseEntity<Todo> findById(@PathVariable Long id) {
@@ -43,9 +44,9 @@ public class TodoControlle {
 
 	@ApiResponses(value = {
 
-			@ApiResponse(responseCode = "200", description = "retorna todo os todo"),
+			@ApiResponse(responseCode = "200", description = "retorna todos os TODOS"),
 
-			@ApiResponse(responseCode = "400", description = "Não existe todo cadastrados") })
+			@ApiResponse(responseCode = "400", description = "Não existe TODO cadastrados") })
 
 	@GetMapping
 	public ResponseEntity<Page<Todo>> findAll(
@@ -56,39 +57,62 @@ public class TodoControlle {
 
 
 	}
-
-	@Operation(description = "adiciona um todo")
+	@Operation(description = "Retorna os todo pela prioridade")
 
 	@ApiResponses(value = {
 
-			@ApiResponse(responseCode = "201", description = "retorna  o todo adicionado"),
-			@ApiResponse(responseCode = "209", description = "conflito - todo ja existe") })
+			@ApiResponse(responseCode = "200", description = "retorna todos os TODO"),
+
+			@ApiResponse(responseCode = "400", description = "Não existe TODO cadastrados") })
+	
+	@GetMapping("/PRIORIDADE")
+	public ResponseEntity<Page<Todo>> buscarTodosPorPrioridade(
+			@RequestParam(defaultValue = "0") int page, 
+			@RequestParam(defaultValue = "10") int size,
+			@RequestParam(defaultValue = "Prioridade") String sortBy,
+			@RequestParam(defaultValue = "asc") String sortOrder) {
+		
+		Sort sort = sortOrder.equalsIgnoreCase(Sort.Direction.ASC.name()) ?
+                Sort.by(sortBy).ascending() :
+                Sort.by(sortBy).descending();
+		
+		return new ResponseEntity<Page<Todo>>(todoService.findAll(PageRequest.of(page, size,sort)), HttpStatus.OK);
+
+
+	}
+
+	@Operation(description = "adiciona um TODO")
+
+	@ApiResponses(value = {
+
+			@ApiResponse(responseCode = "201", description = "retorna  o TODO adicionado"),
+			@ApiResponse(responseCode = "209", description = "conflito - TODO ja existe") })
 
 	@PostMapping
 	public ResponseEntity<Todo> create(@RequestBody Todo todo) {
 		return new ResponseEntity<>(todoService.create(todo), HttpStatus.CREATED);
 	}
 
-	@Operation(description = "atualiza um todo")
+	@Operation(description = "atualiza um TODO")
 
 	@ApiResponses(value = {
 
-			@ApiResponse(responseCode = "201", description = "retorna  o todo atualizado"),
+			@ApiResponse(responseCode = "201", description = "retorna  o TODO atualizado"),
 
-			@ApiResponse(responseCode = "400", description = "Não existe esse todo informado") })
+			@ApiResponse(responseCode = "400", description = "Não existe esse TODO informado") })
 
 	@PutMapping
 	public ResponseEntity<Todo> update(@RequestBody Todo todo) {
 		return new ResponseEntity<>(todoService.update(todo), HttpStatus.CREATED);
 	}
 
-	@Operation(description = "deleta um todo pelo id")
+	@Operation(description = "deleta um todo TODO id")
 
 	@ApiResponses(value = {
 
-			@ApiResponse(responseCode = "204", description = "todo deletado com sucesso"),
+			@ApiResponse(responseCode = "204", description = "TODO deletado com sucesso"),
 
-			@ApiResponse(responseCode = "400", description = "Não existe esse todo informado") })
+			@ApiResponse(responseCode = "400", description = "Não existe esse TODO informado") })
 
 	@DeleteMapping("{id}")
 	public ResponseEntity<?> delete(@PathVariable Long id) {
