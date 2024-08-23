@@ -1,0 +1,5 @@
+user=postgres
+password=1981fla*
+dburl=jdbc:postgresql://localhost:5432/meu_banco_de_dados
+useSSl=false
+
