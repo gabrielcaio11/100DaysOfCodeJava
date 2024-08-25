@@ -1,10 +1,5 @@
 package entities;
 
-import java.sql.SQLException;
-
-import dao.ClientDAO;
-import dao.ProductDAO;
-
 public class Pedido {
 	private int id;
 	private int clientId;

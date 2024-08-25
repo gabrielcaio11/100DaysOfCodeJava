@@ -4,7 +4,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 
 ## Estrutura do Desafio
 
-### Dias 1-10: Fundamentos de Java
+### Sprint 1: Fundamentos de Java
 
 - Introdução ao Java e configuração do ambiente
 - Estrutura de um programa Java
@@ -17,7 +17,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Classes e objetos
 - Encapsulamento e modificadores de acesso
 
-### Dias 11-20: Conceitos Avançados de POO
+### Sprint 2: Conceitos Avançados de POO
 
 - Herança
 - Polimorfismo
@@ -28,7 +28,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Estruturas de dados (ArrayList, LinkedList, HashMap)
 - Coleções e generics
 
-### Dias 21-30: Manipulação de Strings e IO
+### Sprint 3: Manipulação de Strings e IO
 
 - Manipulação de Strings
 - StringBuilder e StringBuffer
@@ -38,7 +38,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Leitura e escrita de arquivos CSV
 - Leitura e escrita de arquivos JSON e XML
 
-### Dias 31-40: Programação Funcional e Lambda
+### Sprint 4: Programação Funcional e Lambda
 
 - Expressões lambda
 - Interface funcional
@@ -51,7 +51,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Java Time API (Date, Time, LocalDate)
 - Java Time API (DateTimeFormatter)
 
-### Dias 41-50: Desenvolvimento Web com Java
+### Sprint 5: Desenvolvimento Web com Java
 
 - Introdução ao desenvolvimento web com Java
 - Servlets e JSP
@@ -64,7 +64,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Criação de APIs RESTful com Spring Boot
 - Documentação de APIs com Swagger
 
-### Dias 51-60: Banco de Dados e Persistência
+### Sprint 6: Banco de Dados e Persistência
 
 - JDBC (Java Database Connectivity)
 - Conexão com banco de dados MySQL/PostgreSQL
@@ -75,9 +75,8 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Cache de segundo nível
 - Transações e concorrência
 - Spring Data JPA (consultas personalizadas)
-- Integração de Spring Boot com MongoDB
 
-### Dias 61-70: Desenvolvimento de Aplicações
+### Sprint 7: Desenvolvimento de Aplicações
 
 - Padrões de design (Singleton, Factory, Builder)
 - Padrões de design (Observer, Strategy, Decorator)
@@ -90,7 +89,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Logs e monitoramento (Logback, SLF4J)
 - Deploy de aplicações Spring Boot no Heroku
 
-### Dias 71-80: Tópicos Avançados
+### Sprint 8: Tópicos Avançados
 
 - Concurrency e multithreading
 - Sincronização de threads
@@ -103,7 +102,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Spring Cloud (Gateway, Circuit Breaker)
 - Docker e Docker Compose
 
-### Dias 81-90: Integração e Comunicação
+### Sprint 9: Integração e Comunicação
 
 - Integração com APIs externas
 - Consumo de APIs RESTful
@@ -116,7 +115,7 @@ Bem-vindo ao meu desafio de 100 dias codando em Java! Este repositório document
 - Ferramentas de build (Maven, Gradle)
 - Monitoramento de aplicações (Prometheus, Grafana)
 
-### Dias 91-100: Projetos e Revisão
+### Sprint 10: Projetos e Revisão
 
 - Projeto final: Planejamento
 - Projeto final: Design
