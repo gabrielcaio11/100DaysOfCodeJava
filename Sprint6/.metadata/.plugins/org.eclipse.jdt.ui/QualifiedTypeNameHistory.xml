@@ -3,4 +3,10 @@
     <fullyQualifiedTypeName name="dao.ProductDAO"/>
     <fullyQualifiedTypeName name="entities.Product"/>
     <fullyQualifiedTypeName name="application.Program"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="br.com.gabrielcaio.ConsultasPersonalizadas.entities.Client"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="br.com.gabrielcaio.ConsultasPersonalizadas.entities.Product"/>
+    <fullyQualifiedTypeName name="br.com.gabrielcaio.ConsultasPersonalizadas.entities.Pedido"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
