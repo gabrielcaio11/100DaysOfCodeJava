@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.gabrielcaio.ConsultasPersonalizadas.entities.Client;
 import br.com.gabrielcaio.ConsultasPersonalizadas.entities.Order;
 import br.com.gabrielcaio.ConsultasPersonalizadas.service.OrderService;
 
@@ -34,13 +37,18 @@ public class OrderController {
         Order order = orderService.findById(id);
         return ResponseEntity.ok(order);
     }
+    @GetMapping("/findOrderByClienteNome")
+    public ResponseEntity<List<Order>> findOrderByClienteNome(@RequestParam("clientName") String clientName) {
+        List<Order> order = orderService.findOrderByClienteNome(clientName);
+        return ResponseEntity.ok(order);
+    }
 
     @PostMapping
     public ResponseEntity<Order> create(@RequestBody Order order) {
         Order savedOrder = orderService.create(order);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedOrder);
     }
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Order> update(@PathVariable Long id, @RequestBody Order order) {
     	order.setId(id);
     	Order savedOrder = orderService.update(order);

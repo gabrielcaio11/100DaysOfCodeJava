@@ -10,8 +10,6 @@ import br.com.gabrielcaio.ConsultasPersonalizadas.entities.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-	List<Order> findByClientName(String clientName);
-
 	@Query("SELECT o FROM Order o JOIN o.client c WHERE c.name = :clientName")
 	List<Order> findOrderByClienteNome(@Param("clientName") String clientName);
 

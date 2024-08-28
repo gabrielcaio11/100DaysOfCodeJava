@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="br.com.gabrielcaio.ConsultasPersonalizadas.entities.Product"/>
     <fullyQualifiedTypeName name="br.com.gabrielcaio.ConsultasPersonalizadas.entities.Pedido"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
 </qualifiedTypeNameHistroy>

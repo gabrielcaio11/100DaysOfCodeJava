@@ -36,7 +36,7 @@ public class OrderService {
 	public void delete(Long id) {
 		orderRepository.deleteById(id);
 	}
-	public List<Order> getOrdersByClientName(String clientName) {
-        return orderRepository.findByClientName(clientName);
+	public List<Order> findOrderByClienteNome(String clientName) {
+        return orderRepository.findOrderByClienteNome(clientName);
     }
 }

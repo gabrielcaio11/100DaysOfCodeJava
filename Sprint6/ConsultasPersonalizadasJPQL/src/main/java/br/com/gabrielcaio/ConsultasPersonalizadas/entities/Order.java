@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,11 +16,11 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@OneToOne
+	@ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;
 
-	@OneToOne
+	@ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
 
@@ -28,6 +28,8 @@ public class Order {
 
 	private double valorTotal;
 
+	public Order() {} 
+	
 	public Order(Client client, Product product, int quantidade, double valorTotal) {
 		this.client = client;
 		this.product = product;
