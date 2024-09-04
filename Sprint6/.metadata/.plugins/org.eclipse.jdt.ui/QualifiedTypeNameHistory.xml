@@ -15,4 +15,6 @@
     <fullyQualifiedTypeName name="entities.Singleton"/>
     <fullyQualifiedTypeName name="buttons.Button"/>
     <fullyQualifiedTypeName name="factory.Dialog"/>
+    <fullyQualifiedTypeName name="entities.Pessoa"/>
+    <fullyQualifiedTypeName name="entities.Pessoa.PessoaBuilder"/>
 </qualifiedTypeNameHistroy>

@@ -1708,3 +1708,5 @@ org.eclipse.core.runtime.CoreException: Launch configuration Program (2) referen
 2024-08-28 16:26:21,920 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Gabriel Caio\OneDrive\Área de Trabalho\100DaysOfCodeJava\Sprint6\ConsultasPersonalizadasJPQL\src\test\resources
 2024-08-29 13:36:32,296 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2024-08-30 12:18:51,534 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-09-03 11:55:33,286 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-09-04 12:20:21,992 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
